@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Drum Kit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="div-container">
+        <div data-key="A" class="key-style">
+            <kbd>A</kbd>
+            <span class="sound">
+                Boom
+            </span>
+        </div>
+        <div data-key="S" class="key-style">
+            <kbd>S</kbd>
+            <span class="sound">
+                Clap
+            </span>
+        </div>
+        <div data-key="D" class="key-style">
+            <kbd>D</kbd>
+            <span class="sound">
+                Hihat
+            </span>
+        </div>
+        <div data-key="F" class="key-style">
+            <kbd>F</kbd>
+            <span class="sound">
+                Kick
+            </span>
+        </div>
+        <div data-key="G" class="key-style">
+            <kbd>G</kbd>
+            <span class="sound">
+                Openhat
+            </span>
+        </div>
+        <div data-key="H" class="key-style">
+            <kbd>H</kbd>
+            <span class="sound">
+                Ride
+            </span>
+        </div>
+        <div data-key="J" class="key-style">
+            <kbd>J</kbd>
+            <span class="sound">
+                Snare
+            </span>
+        </div>
+        <div data-key="K" class="key-style">
+            <kbd>K</kbd>
+            <span class="sound">
+                Tink
+            </span>
+        </div>
+        <div data-key="L" class="key-style">
+            <kbd>L</kbd>
+            <span class="sound">
+                Tom
+            </span>
+        </div>
+    </div>
+
+
+    <audio src="sounds/boom.wav" data-key="A"></audio>
+    <audio src="sounds/clap.wav" data-key="S"></audio>
+    <audio src="sounds/hihat.wav" data-key="D"></audio>
+    <audio src="sounds/kick.wav" data-key="F"></audio>
+    <audio src="sounds/openhat.wav" data-key="G"></audio>
+    <audio src="sounds/ride.wav" data-key="H"></audio>
+    <audio src="sounds/snare.wav" data-key="J"></audio>
+    <audio src="sounds/tink.wav" data-key="K"></audio>
+    <audio src="sounds/tom.wav" data-key="L"></audio>
+
+
+
+    <script>
+
+
+        const keys = document.querySelectorAll('.key-style');
+
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform' && e.propertyName !== 'scale') return;
+
+            this.classList.remove('clicked-style');
+        }
+
+        window.addEventListener("keydown", playSound);
+
+        function playSound(e) {
+            let keyName = e.key.toUpperCase();
+            let activeKey = document.querySelector(`[data-key="${keyName}"]`);
+
+            if (!activeKey) return;
+
+            let audio = document.querySelector(`audio[data-key="${keyName}"]`);
+
+            if (audio) {
+                audio.currentTime = 0;
+                audio.play();
+                activeKey.classList.add("clicked-style");
+            }
+        }
+
+        document.querySelectorAll(".key-style").forEach( item => item.addEventListener("click", clicked))
+
+        function clicked(e){
+            let theItem = e.target.dataset.key;
+            let activeKey = document.querySelector(`[data-key="${theItem}"]`);
+
+            if (!activeKey) return;
+
+            let audio = document.querySelector(`audio[data-key="${theItem}"]`);
+
+            if (audio) {
+                audio.currentTime = 0;
+                audio.play();
+                activeKey.classList.add("clicked-style");
+            }            
+        }
+
+    </script>
+
+</body>
+
+</html>
