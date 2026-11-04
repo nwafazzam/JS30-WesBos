@@ -9,8 +9,8 @@ This repository contains my personal solutions, code implementations, and notes 
 
 | # | Project Name | Description & Tech Used | Status |
 | --- | --- | --- | --- |
-| **01** | [Drum Kit](./01%20-%20Drum%20Kit) | Interactive drum kit triggered by keyboard keys or mouse clicks (HTML5 Audio, CSS Transitions, DOM Events). | ✅ Completed |
-| **02** | [JS + CSS Clock](./02%20-%20JS%20+%20CSS%20Clock) | Real-time analog clock synchronized with system time (Date Object, CSS Transforms, Cubic-Bezier). | ✅ Completed |
+| **01** | [Drum Kit](./JavaScript%20Drum%20Kit/) | Interactive drum kit triggered by keyboard keys or mouse clicks (HTML5 Audio, CSS Transitions, DOM Events). | ✅ Completed |
+| **02** | [JS + CSS Clock](./build%20a%20CSS%20+%20JS%20Clock/) | Real-time analog clock synchronized with system time (Date Object, CSS Transforms, Cubic-Bezier). | ✅ Completed |
 | **03** | *Coming Soon* | Next project in progress... | ⏳ In Progress |
 
 ---
