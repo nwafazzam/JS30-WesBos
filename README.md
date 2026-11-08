@@ -11,7 +11,8 @@ This repository contains my personal solutions, code implementations, and notes 
 | --- | --- | --- | --- |
 | **01** | [Drum Kit](./JavaScript%20Drum%20Kit/) | Interactive drum kit triggered by keyboard keys or mouse clicks (HTML5 Audio, CSS Transitions, DOM Events). | ✅ Completed |
 | **02** | [JS + CSS Clock](./build%20a%20CSS%20+%20JS%20Clock/) | Real-time analog clock synchronized with system time (Date Object, CSS Transforms, Cubic-Bezier). | ✅ Completed |
-| **03** | *Coming Soon* | Next project in progress... | ⏳ In Progress |
+| **03** | [CSS Variables](./CSS%20Variables/) | A dynamic web component that demonstrates how to update CSS Custom Properties (CSS Variables) in real-time using Vanilla JavaScript and interactive form controls. | ✅ Completed |
+| **04** | *Coming Soon* | Next project in progress... | ⏳ In Progress |
 
 ---
 
